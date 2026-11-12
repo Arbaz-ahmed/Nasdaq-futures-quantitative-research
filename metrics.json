@@ -1,0 +1,129 @@
+{
+  "data": {
+    "source": "nq_daily.csv",
+    "start": "2019-01-02",
+    "end": "2026-11-11",
+    "bars": 1980,
+    "split": "2023-01-01",
+    "currency": "USD",
+    "contract": "NQ E-mini (continuous series)",
+    "bar_frequency": "daily",
+    "data_quality": {
+      "flagged_price_discontinuity_days": 16,
+      "open_to_open_over_8pct_days": 5,
+      "close_to_open_gap_over_2pct_days": 12,
+      "off_tick_ohlc_bars": 30,
+      "max_open_to_open_abs_pct": 11.884264165735114,
+      "max_close_to_open_abs_gap_pct": 8.357800910760071,
+      "audit_method": "Threshold screening only. Cannot determine whether an event is a genuine market gap or futures roll."
+    },
+    "snapshot_sha256": "c5563a6133f4d31062ebc708b4d183407cbdd4eb5b0f3e48dc79c151968ddfea",
+    "snapshot_ohlc_precision": "rounded to $0.01 from original public source (derived, not byte-identical)",
+    "source_url": "https://raw.githubusercontent.com/Chief-rich/nasdaq100-data/main/data/nq_daily/history.csv"
+  },
+  "assumptions": {
+    "fast": 20,
+    "slow": 100,
+    "capital_usd": 250000.0,
+    "multiplier_usd_per_point": 20.0,
+    "cost_usd_per_side": 7.5,
+    "execution": "Previous close signal; next open execution; open-to-next-open P&L; final open execution costs charged without future gross P&L",
+    "futures_roll_warning": "Yahoo-derived NQ=F contract transitions and historic point-in-time accuracy not independently authenticated."
+  },
+  "in_sample_strategy": {
+    "total_pnl_usd": 39067.5,
+    "return_pct": 15.627,
+    "sharpe": 0.16283904210093475,
+    "annual_vol_pct": 23.99148232263875,
+    "max_drawdown_pct": -32.8824033443253,
+    "positive_days_pct": 57.48898678414097,
+    "active_days": 908,
+    "observations": 1008
+  },
+  "out_of_sample_strategy": {
+    "total_pnl_usd": 69150.0,
+    "return_pct": 27.66,
+    "sharpe": 0.19787892909299157,
+    "annual_vol_pct": 36.27721470078863,
+    "max_drawdown_pct": -29.520176047073456,
+    "positive_days_pct": 51.54320987654321,
+    "active_days": 972,
+    "observations": 971
+  },
+  "in_sample_benchmark": {
+    "total_pnl_usd": 76132.5,
+    "return_pct": 30.453,
+    "sharpe": 0.31738125069551065,
+    "annual_vol_pct": 23.987711886938172,
+    "max_drawdown_pct": -27.029694448429208,
+    "positive_days_pct": 55.17621145374449,
+    "active_days": 908,
+    "observations": 1008
+  },
+  "out_of_sample_benchmark": {
+    "total_pnl_usd": 335540.0,
+    "return_pct": 134.216,
+    "sharpe": 0.9618546999317207,
+    "annual_vol_pct": 36.213969456611714,
+    "max_drawdown_pct": -21.749441521179847,
+    "positive_days_pct": 54.11522633744856,
+    "active_days": 972,
+    "observations": 971
+  },
+  "out_of_sample_closed_trade_count": 9,
+  "out_of_sample_closed_trade_win_rate_pct": 44.44444444444444,
+  "open_trade_at_last_observation": true,
+  "all_period_closed_trade_count": 17,
+  "statistics": {
+    "next_return_after_up_mean_pct": 0.028723147464327456,
+    "next_return_after_down_mean_pct": 0.16477017420718196,
+    "direction_return_difference_pct_points": -0.1360470267428545,
+    "welch_p_value_exploratory": 0.05329075214186325,
+    "absolute_return_lag1_correlation": 0.2430579610251382,
+    "volatility_clustering_p_value_exploratory": 5.4476530985338945e-28,
+    "sample_days": 1979,
+    "note": "Exploratory only; serial dependence, rolls, data quality and multiple testing can invalidate p-values."
+  },
+  "transaction_cost_sensitivity": {
+    "0": {
+      "total_pnl_usd": 69300.0,
+      "return_pct": 27.72,
+      "sharpe": 0.1983059547889734,
+      "annual_vol_pct": 36.27761949367226,
+      "max_drawdown_pct": -29.503061029271095,
+      "positive_days_pct": 51.54320987654321,
+      "active_days": 972,
+      "observations": 971
+    },
+    "7.5": {
+      "total_pnl_usd": 69150.0,
+      "return_pct": 27.66,
+      "sharpe": 0.19787892909299157,
+      "annual_vol_pct": 36.27721470078863,
+      "max_drawdown_pct": -29.520176047073456,
+      "positive_days_pct": 51.54320987654321,
+      "active_days": 972,
+      "observations": 971
+    },
+    "15": {
+      "total_pnl_usd": 69000.0,
+      "return_pct": 27.6,
+      "sharpe": 0.19745188000374453,
+      "annual_vol_pct": 36.276812454951525,
+      "max_drawdown_pct": -29.537298435331838,
+      "positive_days_pct": 51.54320987654321,
+      "active_days": 972,
+      "observations": 971
+    },
+    "30": {
+      "total_pnl_usd": 68700.0,
+      "return_pct": 27.48,
+      "sharpe": 0.196597712000329,
+      "annual_vol_pct": 36.276015604755244,
+      "max_drawdown_pct": -29.571565342269025,
+      "positive_days_pct": 51.54320987654321,
+      "active_days": 972,
+      "observations": 971
+    }
+  }
+}
